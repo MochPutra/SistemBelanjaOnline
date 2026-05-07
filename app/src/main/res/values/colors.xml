@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary: Dark Navy -->
+    <color name="navy">#0F172A</color>
+    <color name="navy_medium">#1E293B</color>
+    <color name="navy_light">#334155</color>
+
+    <!-- Accent: Gold -->
+    <color name="gold">#C9A84C</color>
+    <color name="gold_light">#F5E6C8</color>
+    <color name="gold_alpha">#1AC9A84C</color>
+
+    <!-- Background -->
+    <color name="bg_cream">#FDFBF7</color>
+    <color name="bg_surface">#FFFFFF</color>
+    <color name="bg_field">#F8F6F2</color>
+
+    <!-- Text -->
+    <color name="text_dark">#0F172A</color>
+    <color name="text_muted">#64748B</color>
+    <color name="text_hint">#94A3B8</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_white_dim">#80FFFFFF</color>
+
+    <!-- Status -->
+    <color name="success_green">#4ADE80</color>
+
+    <!-- Border -->
+    <color name="border_soft">#E8E0D5</color>
+    <color name="border_gold_dim">#4DC9A84C</color>
+
+    <!-- Alias untuk compatibility -->
+    <color name="white">#FFFFFF</color>
+    <color name="primary">@color/navy</color>
+    <color name="text_primary">@color/text_dark</color>
+    <color name="text_secondary">@color/text_muted</color>
+    <color name="divider">@color/border_soft</color>
+</resources>

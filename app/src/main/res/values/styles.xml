@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        PENTING: Gunakan Theme.MaterialComponents.DayNight.NoActionBar
+        dengan Bridge agar warna custom tidak ditimpa Material.
+        Jika masih ungu, ganti parent menjadi:
+        Theme.MaterialComponents.Light.NoActionBar
+    -->
+    <style name="Theme.ShoppingApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#0F172A</item>
+        <item name="colorPrimaryVariant">#1E293B</item>
+        <item name="colorOnPrimary">#C9A84C</item>
+        <item name="colorSecondary">#C9A84C</item>
+        <item name="colorOnSecondary">#0F172A</item>
+        <item name="android:statusBarColor">#0F172A</item>
+        <item name="android:windowBackground">#FDFBF7</item>
+
+        <!-- Paksa EditText tidak pakai Material style -->
+        <item name="editTextStyle">@style/InputEditTextStyle</item>
+
+        <!-- Paksa Button tidak pakai Material style -->
+        <item name="buttonStyle">@style/PlainButtonStyle</item>
+        <item name="materialButtonStyle">@style/PlainButtonStyle</item>
+    </style>
+
+    <!-- EditText: hapus underline Material, pakai background drawable sendiri -->
+    <style name="InputEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#0F172A</item>
+        <item name="android:textColorHint">#CBD5E1</item>
+    </style>
+
+    <!-- Button: hapus ripple/shadow Material, pakai background drawable sendiri -->
+    <style name="PlainButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+</resources>

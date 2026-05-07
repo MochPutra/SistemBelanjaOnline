@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.SistemBelanjaOnline" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#0F172A</item>
+        <item name="colorPrimaryVariant">#1E293B</item>
+        <item name="colorOnPrimary">#C9A84C</item>
+        <item name="colorSecondary">#C9A84C</item>
+        <item name="colorOnSecondary">#0F172A</item>
+        <item name="android:statusBarColor">#0F172A</item>
+        <item name="android:windowBackground">#FDFBF7</item>
+        <item name="editTextStyle">@style/InputEditTextStyle</item>
+        <item name="buttonStyle">@style/PlainButtonStyle</item>
+        <item name="materialButtonStyle">@style/PlainButtonStyle</item>
+    </style>
+
+</resources>

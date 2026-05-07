@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFBF7"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ═══════════ HEADER ═══════════ -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0F172A"
+            android:padding="20dp"
+            android:paddingTop="28dp"
+            android:paddingBottom="32dp">
+
+            <View
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="-30dp"
+                android:layout_marginTop="-30dp"
+                android:background="@drawable/circle_decoration_large"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PUTRA STORE"
+                    android:textColor="#C9A84C"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.15"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaksi Belanja"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hitung belanja Anda dengan mudah"
+                    android:textColor="#80FFFFFF"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- ═══════════ BODY ═══════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- ─── KARTU FORM INPUT ─── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="18dp"
+                android:layout_marginBottom="14dp">
+
+                <!-- Judul -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="18dp">
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="20dp"
+                        android:background="#C9A84C"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DATA TRANSAKSI"
+                        android:textColor="#0F172A"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1"/>
+                </LinearLayout>
+
+                <!-- Nama Pembeli -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NAMA PEMBELI"
+                    android:textColor="#94A3B8"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.06"
+                    android:layout_marginBottom="5dp"/>
+                <EditText
+                    android:id="@+id/etNamaPembeli"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_input"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:hint="Masukkan nama pembeli"
+                    android:textColor="#0F172A"
+                    android:textColorHint="#CBD5E1"
+                    android:textSize="14sp"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionNext"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Nama Produk -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NAMA PRODUK"
+                    android:textColor="#94A3B8"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.06"
+                    android:layout_marginBottom="5dp"/>
+                <EditText
+                    android:id="@+id/etNamaProduk"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_input"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:hint="Masukkan nama produk"
+                    android:textColor="#0F172A"
+                    android:textColorHint="#CBD5E1"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Harga + Jumlah -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="HARGA SATUAN (Rp)"
+                            android:textColor="#94A3B8"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.04"
+                            android:layout_marginBottom="5dp"/>
+                        <EditText
+                            android:id="@+id/etHargaSatuan"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@drawable/bg_input"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:hint="350000"
+                            android:textColor="#0F172A"
+                            android:textColorHint="#CBD5E1"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:imeOptions="actionNext"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="JUMLAH"
+                            android:textColor="#94A3B8"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.06"
+                            android:layout_marginBottom="5dp"/>
+                        <EditText
+                            android:id="@+id/etJumlahBarang"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@drawable/bg_input"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:hint="1"
+                            android:textColor="#0F172A"
+                            android:textColorHint="#CBD5E1"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:imeOptions="actionDone"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Zona Pengiriman -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ZONA PENGIRIMAN"
+                    android:textColor="#94A3B8"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.06"
+                    android:layout_marginBottom="5dp"/>
+
+                <!-- Spinner dibungkus FrameLayout agar background terkontrol -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_input"
+                    android:layout_marginBottom="12dp">
+                    <Spinner
+                        android:id="@+id/spinnerZona"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:background="@null"/>
+                </FrameLayout>
+
+                <!-- Kategori Member -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KATEGORI MEMBER"
+                    android:textColor="#94A3B8"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.06"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/btnMemberReguler"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/bg_member_inactive"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <TextView
+                            android:id="@+id/tvMemberRegulerLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reguler"
+                            android:textSize="14sp"
+                            android:textColor="#64748B"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tanpa diskon"
+                            android:textSize="11sp"
+                            android:textColor="#94A3B8"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnMemberGold"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/bg_member_inactive"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <TextView
+                            android:id="@+id/tvMemberGoldLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gold"
+                            android:textSize="14sp"
+                            android:textColor="#64748B"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Diskon 10%"
+                            android:textSize="11sp"
+                            android:textColor="#94A3B8"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Info Gold -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gold_info"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="★  "
+                        android:textColor="#C9A84C"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Member Gold mendapat Free Ongkir jika belanja ≥ Rp500.000"
+                        android:textColor="#C9A84C"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ─── TOMBOL AKSI ─── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+
+                <Button
+                    android:id="@+id/btnReset"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:text="Reset"
+                    android:textColor="#0F172A"
+                    android:background="@drawable/btn_outline_navy"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:stateListAnimator="@null"/>
+
+                <Button
+                    android:id="@+id/btnHitung"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="2"
+                    android:text="Hitung Belanja"
+                    android:textColor="#C9A84C"
+                    android:background="@drawable/btn_navy"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:stateListAnimator="@null"/>
+            </LinearLayout>
+
+            <!-- ─── OUTPUT / STRUK ─── -->
+            <LinearLayout
+                android:id="@+id/layoutOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#0F172A"
+                    android:padding="20dp"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="18dp">
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="16dp"
+                            android:background="#C9A84C"
+                            android:layout_marginEnd="10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="STRUK BELANJA"
+                            android:textColor="#C9A84C"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.1"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="10dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Nama Pembeli"
+                            android:textColor="#80FFFFFF" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tvOutNamaPembeli"
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1.2" android:textColor="#FFFFFF"
+                            android:textSize="13sp" android:textStyle="bold" android:gravity="end"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="10dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Nama Produk"
+                            android:textColor="#80FFFFFF" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tvOutNamaProduk"
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1.2" android:textColor="#FFFFFF"
+                            android:textSize="13sp" android:textStyle="bold" android:gravity="end"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="10dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Harga Satuan"
+                            android:textColor="#80FFFFFF" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tvOutHargaSatuan"
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1.2" android:textColor="#FFFFFF"
+                            android:textSize="13sp" android:gravity="end"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="10dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Jumlah Barang"
+                            android:textColor="#80FFFFFF" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tvOutJumlahBarang"
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1.2" android:textColor="#FFFFFF"
+                            android:textSize="13sp" android:gravity="end"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                        android:background="#30FFFFFF"
+                        android:layout_marginTop="4dp" android:layout_marginBottom="12dp"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="10dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Subtotal"
+                            android:textColor="#80FFFFFF" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tvOutSubtotal"
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1.2" android:textColor="#FFFFFF"
+                            android:textSize="13sp" android:gravity="end"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="10dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Diskon"
+                            android:textColor="#80FFFFFF" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tvOutDiskon"
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1.2" android:textColor="#4ADE80"
+                            android:textSize="13sp" android:gravity="end"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="10dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Ongkos Kirim"
+                            android:textColor="#80FFFFFF" android:textSize="13sp"/>
+                        <TextView android:id="@+id/tvOutOngkir"
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1.2" android:textColor="#FFFFFF"
+                            android:textSize="13sp" android:gravity="end"/>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="#4DC9A84C"
+                        android:layout_marginTop="4dp" android:layout_marginBottom="14dp"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginBottom="14dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="TOTAL BAYAR"
+                            android:textColor="#80FFFFFF" android:textSize="13sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvOutTotalBayar"
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1.2" android:textColor="#C9A84C"
+                            android:textSize="22sp" android:textStyle="bold" android:gravity="end"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tvOutStatusPromo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_promo_badge"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/tvPromoText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#C9A84C"
+                            android:textSize="12sp"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
